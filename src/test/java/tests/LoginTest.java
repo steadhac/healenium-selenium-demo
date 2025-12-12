@@ -7,6 +7,10 @@ import pages.LoginPage;
 
 public class LoginTest extends BaseTest {
     
+    /**
+     * Test case to verify successful login with valid credentials.
+     * Validates that user is redirected to secure page after login.
+     */
     @Test(priority = 1, description = "Verify login with valid credentials")
     public void testValidLogin() {
         LoginPage loginPage = new LoginPage(driver);
