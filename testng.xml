@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Selenium TestNG Automation Suite" verbose="1">
+    
+    <test name="Login Tests">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+    
+    <test name="Home Page Tests">
+        <classes>
+            <class name="tests.HomePageTest"/>
+        </classes>
+    </test>
+    
+    <test name="Data Driven Tests">
+        <classes>
+            <class name="tests.DataDrivenLoginTest"/>
+        </classes>
+    </test>
+    
+</suite>
