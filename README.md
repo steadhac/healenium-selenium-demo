@@ -1,4 +1,15 @@
-# Selenium TestNG Automation Framework
+# Healenium Self-Healing Selenium Framework
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://www.oracle.com/java/)
+[![Selenium](https://img.shields.io/badge/Selenium-4.16.1-green.svg)](https://www.selenium.dev/)
+[![Healenium](https://img.shields.io/badge/Healenium-3.4.1-blue.svg)](https://healenium.io/)
+[![TestNG](https://img.shields.io/badge/TestNG-7.8.0-red.svg)](https://testng.org/)
+
+> **Self-healing test automation framework** with Healenium integration. Demonstrates AI-powered locator healing to reduce test maintenance.
+
+---
+
 ## Complete Guide: From Manual Testing to Automation Mastery
 
 ---
