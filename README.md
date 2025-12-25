@@ -515,7 +515,7 @@ wait.waitForElementVisible(element);
 
 **Don't worry!** This is normal and part of learning automation.
 
-📖 **See [DEBUGGING_GUIDE.md](DEBUGGING_GUIDE.md)** for a complete step-by-step tutorial on:
+📖 **See [DEBUGGING_GUIDE.md](docs/DEBUGGING_GUIDE.md)** for a complete step-by-step tutorial on:
 - How to read error messages
 - How to inspect elements with browser DevTools
 - How to find correct locators
@@ -526,16 +526,11 @@ The debugging guide teaches you the most important skill in automation: **troubl
 
 ---
 
-## 🔧 Self-Healing Locators (Advanced Feature)
+## 🔧 Self-Healing with Healenium (Advanced Feature)
 
 **Production-grade resilience pattern!**
 
-📖 **See [SELF_HEALING_GUIDE.md](SELF_HEALING_GUIDE.md)** for complete tutorial on:
-- What are self-healing locators?
-- Why they're used in production
-- How to implement fallback strategies
-- Progressive hints for learning
-- Real-world examples
+This project uses **Healenium** for automatic locator healing when web elements change.
 
 **Benefits:**
 - ✅ Tests auto-recover when locators change
@@ -543,18 +538,14 @@ The debugging guide teaches you the most important skill in automation: **troubl
 - ✅ Shows advanced Selenium skills
 - ✅ Industry best practice
 
-**Quick Example:**
+**How it works:**
 ```java
-// Instead of failing on changed locator...
-driver.findElement(By.id("login")).click();  // ❌ Breaks
-
-// Self-healing tries fallbacks automatically!
-healer.findElement("Login Button",
-    By.id("login"),                      // Primary
-    By.cssSelector("button[type='submit']"),  // Fallback 1
-    By.xpath("//button[@type='submit']")      // Fallback 2
-);  // ✅ Auto-recovers!
+// Healenium automatically finds alternative locators when original fails
+@FindBy(id = "login")
+WebElement loginButton;  // If ID changes, Healenium finds it by other attributes
 ```
+
+**Setup:** See `infra/docker-compose.yml` to run Healenium backend services.
 
 ---
 
@@ -573,14 +564,13 @@ healer.findElement("Login Button",
 ## 📚 Additional Resources
 
 ### Project Documentation
-- **[SELF_HEALING_GUIDE.md](SELF_HEALING_GUIDE.md)** - Implement resilient automation
-- **[DEBUGGING_GUIDE.md](DEBUGGING_GUIDE.md)** - Fix failing tests
-- **[CLEAN_CODE_GUIDE.md](CLEAN_CODE_GUIDE.md)** - Write maintainable code
+- **[DEBUGGING_GUIDE.md](docs/DEBUGGING_GUIDE.md)** - Fix failing tests
+- **[CLEAN_CODE_GUIDE.md](docs/CLEAN_CODE_GUIDE.md)** - Write maintainable code
 - **[EXERCISES.md](EXERCISES.md)** - 20+ practice exercises
-- **[BUG_REPORTS.md](BUG_REPORTS.md)** - Intentional bugs + solutions
-- **[TEST_PLAN.md](TEST_PLAN.md)** - Complete test planning
-- **[TEST_CASES.md](TEST_CASES.md)** - Test case specifications
-- **[TRACEABILITY_MATRIX.md](TRACEABILITY_MATRIX.md)** - Requirements traceability
+- **[BUG_REPORTS.md](docs/BUG_REPORTS.md)** - Intentional bugs + solutions
+- **[TEST_PLAN.md](docs/TEST_PLAN.md)** - Complete test planning
+- **[TEST_CASES.md](docs/TEST_CASES.md)** - Test case specifications
+- **[TRACEABILITY_MATRIX.md](docs/TRACEABILITY_MATRIX.md)** - Requirements traceability
 
 ### External Resources
 - **Selenium Documentation**: https://www.selenium.dev/documentation/
@@ -632,7 +622,7 @@ This project follows **clean code principles** to ensure maintainable, readable 
 - ✅ **Consistent Formatting**: Uniform code style throughout
 
 ### Learn More:
-📖 **See [CLEAN_CODE_GUIDE.md](CLEAN_CODE_GUIDE.md)** for a comprehensive guide on:
+📖 **See [CLEAN_CODE_GUIDE.md](docs/CLEAN_CODE_GUIDE.md)** for a comprehensive guide on:
 - What is clean code and why it matters
 - 10 essential clean code principles with examples
 - Before/after code comparisons
