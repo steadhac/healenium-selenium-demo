@@ -634,6 +634,17 @@ This project follows **clean code principles** to ensure maintainable, readable 
 
 ---
 
-*Professional Selenium TestNG Framework*  
-*Built to demonstrate best practices in test automation*  
-*Date: December 2025 | Version: 1.0*
+## 👤 Author
+
+**Carolina Steadham**
+- GitHub: [@steadhac](https://github.com/steadhac)
+- LinkedIn: [Carolina Steadham](https://linkedin.com/in/carolinacsteadham)
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you find it helpful!**
+
+Made with ❤️ and Python
+
