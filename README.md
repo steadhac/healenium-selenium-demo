@@ -16,14 +16,14 @@
 
 ```mermaid
 flowchart TD
-    A[Tester / CI] -->|Runs| B[TestNG Tests]
-    B --> C[Page Objects]
-    C --> D[WebDriver (Selenium)]
-    D --> E[Web Application Under Test]
-    D --> F[Healenium Proxy]
-    F -->|Heals Locators| D
-    F --> G[Healenium Backend Service]
-    G --> H[Docker Compose]
+    A[TestRunner] -->|Runs| B[TestNG_Tests]
+    B --> C[PageObjects]
+    C --> D[WebDriver_Selenium]
+    D --> E[WebApp_Under_Test]
+    D --> F[Healenium_Proxy]
+    F -->|Heals_Locators| D
+    F --> G[Healenium_Backend]
+    G --> H[DockerCompose]
 ```
 ---
 
