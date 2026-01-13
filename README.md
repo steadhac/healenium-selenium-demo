@@ -14,6 +14,8 @@
 
 ## 🗺️ Architecture Diagram
 
+## 🗺️ Architecture Diagram
+
 ```mermaid
 flowchart TD
     A[Tester / CI] -->|Runs| B[TestNG Tests]
@@ -23,8 +25,7 @@ flowchart TD
     D --> F[Healenium Proxy]
     F -->|Heals Locators| D
     F --> G[Healenium Backend Service]
-    G -.->|Stores Locator History| F
-    G -.->|Runs in Docker| H[(Docker Compose)]
+    G --> H[Docker Compose]
 ```    
 ---
 
