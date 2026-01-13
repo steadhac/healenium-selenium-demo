@@ -12,6 +12,20 @@
 
 ## Complete Guide: From Manual Testing to Automation Mastery
 
+## 🗺️ Architecture Diagram
+
+```mermaid
+flowchart TD
+    A[Tester / CI] -->|Runs| B[TestNG Tests]
+    B --> C[Page Objects]
+    C --> D[WebDriver (Selenium)]
+    D --> E[Web Application Under Test]
+    D --> F[Healenium Proxy]
+    F -->|Heals Locators| D
+    F --> G[Healenium Backend Service]
+    G -.->|Stores Locator History| F
+    G -.->|Runs in Docker| H[(Docker Compose)]
+```    
 ---
 
 ## 📋 Table of Contents
